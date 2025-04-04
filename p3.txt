@@ -1,0 +1,5 @@
+1,6,Popescu Ion,Ionescu Maria,125.50
+2,9,Georgescu Andrei,Petrescu Elena,89.90
+3,3,Marin Adrian,Constantinescu Radu,150.75
+4,2,Stanciu Mihai,Dumitrescu Ana,45.30
+5,5,Ilie Gabriela,Enache Vlad,78.25
