@@ -31,7 +31,6 @@ void afisareReteta(reteta r) {
 	printf("%d, %u, %s, %s, %.2f", r.nr, r.medicamPrescrise, r.numePacient, r.numePacient, r.valoareReteta);
 	printf("\n");
 }
-//Nu trebuia dezalocare?
 
 
 struct nod {
@@ -64,7 +63,7 @@ int inserareHash(HashTable tabela, reteta r) {
 		}
 		else {
 			nod* aux = tabela.vector[pozitie];
-			while (aux) {
+			while (aux->next!=NULL) {
 				aux = aux->next;
 			}
 			aux->next = nou;
@@ -102,7 +101,21 @@ void dezalocare(HashTable tabela) {
 		free(tabela.vector);
 	}
 }
-
+double valoareTotalaRetete(HashTable tabela, const char* numePacient) {
+	double suma = 0;
+	if (tabela.vector) {
+		for (int i = 0; i < tabela.dim;i++) {
+			nod* aux = tabela.vector[i];
+			while (aux) {
+				if (strcmp(aux->info.numePacient, numePacient) == 0) {
+					suma += aux->info.valoareReteta;
+				}
+				aux = aux->next;
+			}
+		}
+	}
+	return suma;
+}
 void main() {
 	reteta r;
 	HashTable tabela;
@@ -143,4 +156,6 @@ void main() {
 	}
 	fclose(f);
 	traversareHash(tabela);
+
+	printf("Valoarea totala a retetelor: %.2f", valoareTotalaRetete(tabela, "Ilie Gabriela"));
 }

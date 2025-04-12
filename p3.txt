@@ -3,3 +3,4 @@
 3,3,Marin Adrian,Constantinescu Radu,150.75
 4,2,Stanciu Mihai,Dumitrescu Ana,45.30
 5,5,Ilie Gabriela,Enache Vlad,78.25
+4,2,Ilie Gabriela,Dumitrescu Ana,45.30
