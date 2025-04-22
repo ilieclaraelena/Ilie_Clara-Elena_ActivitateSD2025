@@ -1,0 +1,5 @@
+Catena,120.5,15,flexibil,7
+Sensiblu,85.3,10,12 ore,10
+HelpNet,95.0,12,10 ore,8
+Dona,100.2,14,5 ore,9
+Remedia,70.75,8,7 ore,8
