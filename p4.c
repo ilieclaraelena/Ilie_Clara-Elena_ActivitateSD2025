@@ -103,7 +103,36 @@ int nrFarmaciiDeschiseLaOrASpecificata(LD lista, int oraDeschidere) {
 	return counter;
 }
 
+/*
+caz 1:s>min && s>p => min=s, p=min;
+caz2: s==min &&s>p => min=s, p=min;
+caz3: s==min && s=p=> -
+caz4: s<min &&s>p => p=s,
 
+*/
+int farmaciiCuSupraftaMare(LD lista) {
+	int min = -1;
+	int penultimMin = -1;
+	farmacie* minFarmacie = NULL;
+	farmacie* penultimFarmacie = NULL;
+	nod* aux = lista.prim;
+	while (aux) {
+		if (aux->info.suprafata >= min) {
+			penultimMin = min;
+			min = aux->info.suprafata;
+			penultimFarmacie = minFarmacie;
+			minFarmacie = &aux->info;
+		}
+		else if (aux->info.suprafata > penultimMin) {
+			penultimMin = aux->info.suprafata;
+			penultimFarmacie = &aux->info;
+
+		}
+		aux = aux->next;
+	}
+	printf("Farmacii cu suprafata max:%s si penultim:%s", minFarmacie->denumire, penultimFarmacie->denumire);
+	return 0;
+}
 
 void main() {
 	farmacie f;
@@ -143,6 +172,6 @@ void main() {
 	traversareLDFinal(lista);
 
 	printf("Nr farmacii: %d\n", nrFarmaciiDeschiseLaOrASpecificata(lista, 8));
-	
+	farmaciiCuSupraftaMare(lista);
 	dezalocare(lista);
 }
