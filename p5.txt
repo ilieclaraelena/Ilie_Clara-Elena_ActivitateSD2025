@@ -1,0 +1,5 @@
+101,Programare C,6,78.5
+102,Structuri de date,5,84.3
+103,Algoritmi,7,72.1
+104,Baze de date,6,88.7
+105,Re?ele de calculatoare,5,65.2
