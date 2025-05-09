@@ -1,0 +1,3 @@
+1,Colegiul National,30,800
+2,Liceul Teoretic,25,600
+3,Scoala Gimnaziala,20,500
