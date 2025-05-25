@@ -1,0 +1,4 @@
+1,Mircea Eliade,1933,45.5
+2,Ion Creanga,1875,32.0
+3,Mihai Eminescu,1883,55.25
+4,Ioan Slavici,1894,28.75
