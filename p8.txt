@@ -1,0 +1,4 @@
+10,Elexius,2,Ana,490.99
+17,Mercur,1,Mihai,550.99
+15,Olimp,5,Amalia,799.99
+20,Pluto,3,Maria,4499.55
